@@ -1,11 +1,11 @@
 import { NextFunction, Request, Response } from "express";
 import { ZodType } from "zod";
-import logger from "../config/logger.config";
+import logger from "../config/logger.config.js";
 
 /**
  * 
- * @param schema - Zod schema to validate the request body
- * @returns - Middleware function to validate the request body
+ * @param schema 
+ * @returns 
  */
 export const validateRequestBody = (schema: ZodType) => {
     return async (req: Request, res: Response, next: NextFunction) => {

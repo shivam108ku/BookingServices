@@ -1,17 +1,20 @@
 {
   "name": "expresstypescripttemplate",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "dev": "nodemon src/server.ts"
+    "start": "node --loader ts-node/esm src/server.ts",
+    "dev": "nodemon --exec node --loader ts-node/esm src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv": "17.3.1",
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "7.5.0",
+    "dotenv": "^17.3.1",
     "express": "5.2.1",
     "uuid": "13.0.0",
     "winston": "3.19.0",
@@ -20,8 +23,9 @@
   },
   "devDependencies": {
     "@types/express": "5.0.6",
-    "@types/node": "25.5.0",
+    "@types/node": "^25.5.0",
     "nodemon": "3.1.14",
+    "prisma": "7.5.0",
     "ts-node": "10.9.2",
     "typescript": "5.9.3"
   }
