@@ -8,8 +8,7 @@ export async function createBookingService (
     userId: number,
     hotelId: number,
     totalGuests: number,
-    bookingAmount: number,
-    checkInDate: Date,
+    bookingAmount: number
 ) {
    //  Implement the logic here
    const booking = await createBooking({
