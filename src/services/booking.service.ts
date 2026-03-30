@@ -11,7 +11,7 @@ export async function createBookingService (
     bookingAmount: number,
     checkInDate: Date,
 ) {
-   //  Implement the login here
+   //  Implement the logic here
    const booking = await createBooking({
     userId,
     hotelId,
