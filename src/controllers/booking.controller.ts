@@ -3,12 +3,7 @@ import { createBookingService } from "../services/booking.service";
 
 export const creteBookingHandler = async(req: Request, res: Response) => {
 
-    const booking = await createBookingService (
-        req.body.userId,
-        req.body.hotelId,
-        req.body.totalGuests,
-        req.body.bookingAmount
-    );
+    const booking = await createBookingService (req.body);
 
     res.status(201).json({
         bookingId: booking.bookingId,
